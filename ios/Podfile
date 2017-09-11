@@ -9,6 +9,7 @@ target 'MCTest' do
   pod 'MobileCenter/Crashes', '~> 0.12.1'
   pod 'MobileCenter/Analytics', '~> 0.12.1'
   pod 'RNMobileCenterShared', '~> 0.9.0'
+  pod 'CodePush', :path => '../node_modules/react-native-code-push'
 
   
 

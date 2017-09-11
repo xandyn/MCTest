@@ -15,13 +15,12 @@ target 'MCTest' do
     'RCTWebSocket', # needed for debugging
     # Add any other subspecs you want to use in your project
   ]
+  pod 'CodePush', :path => '../node_modules/react-native-code-push'
 
   # Pods for MCTest
   pod 'MobileCenter/Crashes', '~> 0.12.1'
   pod 'MobileCenter/Analytics', '~> 0.12.1'
   pod 'RNMobileCenterShared', '~> 0.9.0'
-  pod 'CodePush', :path => '../node_modules/react-native-code-push'
-
   
 
   target 'MCTestTests' do
@@ -29,14 +28,6 @@ target 'MCTest' do
     # Pods for testing
   end
 
-end
-
-post_install do |installer|
-  installer.pods_project.targets.each do |target|
-    if target.name == "React"
-      target.remove_from_project
-    end
-  end
 end
 
 target 'MCTest-tvOS' do

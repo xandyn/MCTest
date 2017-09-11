@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+platform :ios, '8.0'
 
 target 'MCTest' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
@@ -7,7 +7,9 @@ target 'MCTest' do
   
   pod "Yoga", :path => "../node_modules/react-native/ReactCommon/yoga"
   pod 'React', :path => '../node_modules/react-native', :subspecs => [
+    'BatchedBridge',
     'Core',
+    'DevSupport', # Include this to enable In-App Devmenu if RN >= 0.43
     'RCTText',
     'RCTNetwork',
     'RCTWebSocket', # needed for debugging
